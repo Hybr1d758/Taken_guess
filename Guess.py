@@ -5,11 +5,13 @@ name = input()
 secretNumber = random.randint(1, 20)
 print('Alright ' + name + ' Can you guess the number I am thinking about')
 
+#the first clue
 def generate_three_number_hint():
     hints = [secretNumber]
     hints.append(7,17)
     return hints
 
+#the second clue
 for guessesTaken in range(1, 7):
     print('Take a guess')
     guess = int(input())
@@ -20,10 +22,12 @@ for guessesTaken in range(1, 7):
     else:
         break
 
+#the third clue
 if (guess % 2) == 0:
     print("The answer is even")
 else:
     print("The answer is odd")
+
 
 
 if guess == secretNumber:
@@ -32,4 +36,3 @@ else:
     print('Nope, the number i was thinking was ' + str(secretNumber))
 
 print('It took you ' + str(guessesTaken))
-print('thank you' + name)
