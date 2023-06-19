@@ -32,3 +32,4 @@ else:
     print('Nope, the number i was thinking was ' + str(secretNumber))
 
 print('It took you ' + str(guessesTaken))
+print('thank you' + name)
